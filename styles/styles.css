@@ -3,6 +3,12 @@
 
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900 */
+
+.btnSelect {
+  background-color: #1DD100;
+
+}
+
 .raleway-reglr {
   font-family: "Raleway", system-ui;
   font-optical-sizing: auto;

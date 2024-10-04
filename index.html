@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
-
+    <script src="./script/utility.js"></script>
 </head>
 
 <body>
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                         <div>
-                            <p class="flex rounded-xl bg-[#1DD10026] text-[#1DD100] p-3 px-8 inter-md xl:text-lg"><img class="h-fit mr-1" src="./images/seat-green.png"> 40 Seats left</p>
+                            <p class="flex rounded-xl bg-[#1DD10026] text-[#1DD100] p-3 px-8 inter-md xl:text-lg"><img class="h-fit mr-1" src="./images/seat-green.png"><span id="sit-left" class="mr-1">40</span>Seats left</p>
                         </div>
                     </div>
 
@@ -223,68 +223,68 @@
                             <!-- sit column serial 1 2  -->
                             <div class=" flex">
                                 <div class="flex flex-col gap-5">
-                                    <p class="btn hover:bg-white bg-transparent">A </p>
-                                    <p class="btn hover:bg-white bg-transparent">B </p>
-                                    <p class="btn hover:bg-white bg-transparent">C </p>
-                                    <p class="btn hover:bg-white bg-transparent">D </p>
-                                    <p class="btn hover:bg-white bg-transparent">E </p>
-                                    <p class="btn hover:bg-white bg-transparent">F </p>
-                                    <p class="btn hover:bg-white bg-transparent">G </p>
-                                    <p class="btn hover:bg-white bg-transparent">H </p>
-                                    <p class="btn hover:bg-white bg-transparent">I </p>
-                                    <p class="btn hover:bg-white bg-transparent">J </p>
+                                    <button class="btn hover:bg-white bg-transparent">A </button>
+                                    <button class="btn hover:bg-white bg-transparent">B </button>
+                                    <button class="btn hover:bg-white bg-transparent">C </button>
+                                    <button class="btn hover:bg-white bg-transparent">D </button>
+                                    <button class="btn hover:bg-white bg-transparent">E </button>
+                                    <button class="btn hover:bg-white bg-transparent">F </button>
+                                    <button class="btn hover:bg-white bg-transparent">G </button>
+                                    <button class="btn hover:bg-white bg-transparent">H </button>
+                                    <button class="btn hover:bg-white bg-transparent">I </button>
+                                    <button class="btn hover:bg-white bg-transparent">J </button>
                                 </div>
                                 <div class="flex flex-col gap-5">
-                                    <P class="btn px-8 mx-3">A1</P>
-                                    <P class="btn px-8 mx-3">B1</P>
-                                    <P class="btn px-8 mx-3">C1</P>
-                                    <P class="btn px-8 mx-3">D1</P>
-                                    <P class="btn px-8 mx-3">E1</P>
-                                    <P class="btn px-8 mx-3">F1</P>
-                                    <P class="btn px-8 mx-3">G1</P>
-                                    <P class="btn px-8 mx-3">H1</P>
-                                    <P class="btn px-8 mx-3">I1</P>
-                                    <P class="btn px-8 mx-3">J1</P>
+                                    <button id="A1" onclick="onClick(this)" class="btn px-8 mx-3">A1</button>
+                                    <button id="B1" onclick="onClick(this)" class="btn px-8 mx-3">B1</button>
+                                    <button id="C1" onclick="onClick(this)" class="btn px-8 mx-3">C1</button>
+                                    <button id="D1" onclick="onClick(this)" class="btn px-8 mx-3">D1</button>
+                                    <button id="E1" onclick="onClick(this)" class="btn px-8 mx-3">E1</button>
+                                    <button id="F1" onclick="onClick(this)" class="btn px-8 mx-3">F1</button>
+                                    <button id="G1" onclick="onClick(this)" class="btn px-8 mx-3">G1</button>
+                                    <button id="H1" onclick="onClick(this)" class="btn px-8 mx-3">H1</button>
+                                    <button id="I1" onclick="onClick(this)" class="btn px-8 mx-3">I1</button>
+                                    <button id="J1" onclick="onClick(this)" class="btn px-8 mx-3">J1</button>
                                 </div>
                                 <div class="flex flex-col gap-5">
-                                    <P class="btn px-8 mx-3">A2</P>
-                                    <P class="btn px-8 mx-3">B2</P>
-                                    <P class="btn px-8 mx-3">C2</P>
-                                    <P class="btn px-8 mx-3">D2</P>
-                                    <P class="btn px-8 mx-3">E2</P>
-                                    <P class="btn px-8 mx-3">F2</P>
-                                    <P class="btn px-8 mx-3">G2</P>
-                                    <P class="btn px-8 mx-3">H2</P>
-                                    <P class="btn px-8 mx-3">I2</P>
-                                    <P class="btn px-8 mx-3">J2</P>
+                                    <button id="A2" onclick="onClick(this)" class="btn px-8 mx-3">A2</button>
+                                    <button id="B2" onclick="onClick(this)" class="btn px-8 mx-3">B2</button>
+                                    <button id="C2" onclick="onClick(this)" class="btn px-8 mx-3">C2</button>
+                                    <button id="D2" onclick="onClick(this)" class="btn px-8 mx-3">D2</button>
+                                    <button id="E2" onclick="onClick(this)" class="btn px-8 mx-3">E2</button>
+                                    <button id="F2" onclick="onClick(this)" class="btn px-8 mx-3">F2</button>
+                                    <button id="G2" onclick="onClick(this)" class="btn px-8 mx-3">G2</button>
+                                    <button id="H2" onclick="onClick(this)" class="btn px-8 mx-3">H2</button>
+                                    <button id="I2" onclick="onClick(this)" class="btn px-8 mx-3">I2</button>
+                                    <button id="J2" onclick="onClick(this)" class="btn px-8 mx-3">J2</button>
                                 </div>
 
                             </div>
                             <!-- sit column 3 4 -->
                             <div class=" flex">
                                 <div class="flex flex-col gap-5">
-                                    <P class="btn px-8 mx-3">A3</P>
-                                    <P class="btn px-8 mx-3">B3</P>
-                                    <P class="btn px-8 mx-3">C3</P>
-                                    <P class="btn px-8 mx-3">D3</P>
-                                    <P class="btn px-8 mx-3">E3</P>
-                                    <P class="btn px-8 mx-3">F3</P>
-                                    <P class="btn px-8 mx-3">G3</P>
-                                    <P class="btn px-8 mx-3">H3</P>
-                                    <P class="btn px-8 mx-3">I3</P>
-                                    <P class="btn px-8 mx-3">J3</P>
+                                    <button id="A3" onclick="onClick(this)" class="btn px-8 mx-3">A3</button>
+                                    <button id="B3" onclick="onClick(this)" class="btn px-8 mx-3">B3</button>
+                                    <button id="C3" onclick="onClick(this)" class="btn px-8 mx-3">C3</button>
+                                    <button id="D3" onclick="onClick(this)" class="btn px-8 mx-3">D3</button>
+                                    <button id="E3" onclick="onClick(this)" class="btn px-8 mx-3">E3</button>
+                                    <button id="F3" onclick="onClick(this)" class="btn px-8 mx-3">F3</button>
+                                    <button id="G3" onclick="onClick(this)" class="btn px-8 mx-3">G3</button>
+                                    <button id="H3" onclick="onClick(this)" class="btn px-8 mx-3">H3</button>
+                                    <button id="I3" onclick="onClick(this)" class="btn px-8 mx-3">I3</button>
+                                    <button id="J3" onclick="onClick(this)" class="btn px-8 mx-3">J3</button>
                                 </div>
                                 <div class="flex flex-col gap-5">
-                                    <P class="btn px-8 mx-3">A4</P>
-                                    <P class="btn px-8 mx-3">B4</P>
-                                    <P class="btn px-8 mx-3">C4</P>
-                                    <P class="btn px-8 mx-3">D4</P>
-                                    <P class="btn px-8 mx-3">E4</P>
-                                    <P class="btn px-8 mx-3">F4</P>
-                                    <P class="btn px-8 mx-3">G4</P>
-                                    <P class="btn px-8 mx-3">H4</P>
-                                    <P class="btn px-8 mx-3">I4</P>
-                                    <P class="btn px-8 mx-3">J4</P>
+                                    <button id="A4" onclick="onClick(this)" class="btn px-8 mx-3">A4</button>
+                                    <button id="B4" onclick="onClick(this)" class="btn px-8 mx-3">B4</button>
+                                    <button id="C4" onclick="onClick(this)" class="btn px-8 mx-3">C4</button>
+                                    <button id="D4" onclick="onClick(this)" class="btn px-8 mx-3">D4</button>
+                                    <button id="E4" onclick="onClick(this)" class="btn px-8 mx-3">E4</button>
+                                    <button id="F4" onclick="onClick(this)" class="btn px-8 mx-3">F4</button>
+                                    <button id="G4" onclick="onClick(this)" class="btn px-8 mx-3">G4</button>
+                                    <button id="H4" onclick="onClick(this)" class="btn px-8 mx-3">H4</button>
+                                    <button id="I4" onclick="onClick(this)" class="btn px-8 mx-3">I4</button>
+                                    <button id="J4" onclick="onClick(this)" class="btn px-8 mx-3">J4</button>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +308,7 @@
                                 <!-- head -->
                                 <thead>
                                     <tr>
-                                        <th>Seat</th>
+                                        <th>Seat <span id="seat-Number" class="text-white bg-green-500 rounded-lg px-2">0</span></th>
                                         <th>Class</th>
                                         <th>Price</th>
                                     </tr>
@@ -330,14 +330,15 @@
 
                         <div class="inter-md text-base flex justify-between px-3">
                             <p>Total Price</p>
-                            <p>BDT <span>1000</span></p>
+                            <p>BDT <span>00</span></p>
                         </div>
-                        <div class="inter-md text-base flex justify-between px-3 hidden">
+                        <div class="inter-md text-base flex justify-between px-3 ">
                             <p>Discounted Price</p>
-                            <p>BDT <span>100</span></p>
+                            <p>BDT <span>00</span></p>
                         </div>
 
                         <!-- coupon code section  -->
+                         
                         <div class="inter-md my-2 px-3">
                             <label class="input input-bordered flex items-center justify-between relative">
                                 <input type="text" class=" grow placeholder:text-xs " placeholder="Have any copupon?" />
@@ -349,7 +350,7 @@
                         <!-- total price  -->
                         <div class="inter-md text-base flex justify-between px-3">
                             <p>Grand Total</p>
-                            <p>BDT <span>1100</span></p>
+                            <p>BDT <span>00</span></p>
                         </div>
                     </div> <!-- end price table  -->
 
@@ -422,7 +423,14 @@
             </div>
         </div>
     </footer>
+    
     <script src="./script/script.js"></script>
+    <script>
+        function onclicki(){
+            console.log('clicked ')
+        }
+    </script>
+
 </body>
 
 </html>
