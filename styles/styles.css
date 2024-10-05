@@ -1,12 +1,5 @@
-
-
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900 */
-
 .btnSelect {
   background-color: #1DD100;
-
 }
 
 .raleway-reglr {
@@ -44,9 +37,6 @@
   font-style: normal;
 }
 
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900 */
-
 .inter-reglr {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -81,6 +71,7 @@
   font-weight: 800;
   font-style: normal;
 }
+
 .inter-black {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -88,12 +79,12 @@
   font-style: normal;
 }
 
-.btnbg{
-    background-color: #0307120D;
-    border-radius: .5rem;
-    padding: .5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.btnbg {
+  background-color: #0307120D;
+  border-radius: .5rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .roboto-light {
@@ -113,6 +104,7 @@
   font-weight: 500;
   font-style: normal;
 }
+
 .roboto-semi {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
