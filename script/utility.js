@@ -1,13 +1,21 @@
-function addTicketToTable() {
+function addTicketToTable(sitName) {
     let item = document.getElementById('no-ticket-warning')
     let tbody = document.getElementById('ticket-tbody')
     item.classList.add('hidden')
     let tr = document.createElement('tr')
-    tr.innerHTML = ` <th>C2</th>
-<td>Economy</td>
-<td>550</td> `
+    let th = document.createElement('th')
+    th.innerText = sitName
+    let td1 = document.createElement('td')
+    td1.innerText = "Economy"
+    let td2 = document.createElement('td')
+    td2.innerText = "550"
+//     tr.innerHTML = ` <th>sitname</th>
+// <td>Economy</td>
+// <td>550</td> `
+tr.appendChild(th)
+tr.appendChild(td1)
+tr.appendChild(td2)
     tbody.appendChild(tr)
-
 }
 
 function updateTotalPrice() {

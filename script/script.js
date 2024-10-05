@@ -14,7 +14,7 @@ function onClick(element) {
             sitValue = sitValue + 1
             document.getElementById('seat-Number').innerText = sitValue
             sitLeft.innerText = 40 - sitValue
-            addTicketToTable()
+            addTicketToTable(element.id)
             updateTotalPrice()
             enableCouponApplyButton()
             document.getElementById('next-page-button').classList.remove('btn-disabled')
