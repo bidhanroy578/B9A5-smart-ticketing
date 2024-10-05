@@ -16,8 +16,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
-    <script src="./script/utility.js"></script>
 </head>
 
 <body>
@@ -125,7 +129,7 @@
                     <div
                         class="h-[18em] bg-[#F78C9C] w-[18em] rounded-r-[2em] flex flex-col justify-center items-center   ">
                         <div>
-                            <h4 class="raleway-bld text-3xl ">couple 20</h4>
+                            <h4 class="raleway-bld text-3xl ">couple<span class="text-4xl">20</span></h4>
                             <p class="raleway-md text-xl">Coupon Code</p>
                         </div>
                     </div>
@@ -145,7 +149,8 @@
             <!-- detail -->
             <div class="my-20">
                 <h3 class="raleway-bld text-4xl mb-5">P.H Paribahan</h3>
-                <p class="inter-reglr text-lg">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing
+                <p class="inter-reglr text-lg">Yes, you can run unit tests and view the results directly within the app.
+                    The integrated <br> testing
                     features allow for a streamlined .</p>
             </div>
 
@@ -166,7 +171,9 @@
                             </div>
                         </div>
                         <div>
-                            <p class="flex rounded-xl bg-[#1DD10026] text-[#1DD100] p-3 px-8 inter-md xl:text-lg"><img class="h-fit mr-1" src="./images/seat-green.png"><span id="sit-left" class="mr-1">40</span>Seats left</p>
+                            <p class="flex rounded-xl bg-[#1DD10026] text-[#1DD100] p-3 px-8 inter-md xl:text-lg"><img
+                                    class="h-fit mr-1" src="./images/seat-green.png"><span id="sit-left"
+                                    class="mr-1">40</span>Seats left</p>
                         </div>
                     </div>
 
@@ -205,7 +212,8 @@
                 <div class="w-2/3">
                     <h3 class="text-start text-2xl font-bold mb-3">Select Your Seat</h3>
                     <div class="divider px-5 "></div>
-                    <div class="w-full flex justify-between inter-md"> <!-- border-y-2 border-slate-300 border-dashed py-3 -->
+                    <div class="w-full flex justify-between inter-md">
+                        <!-- border-y-2 border-slate-300 border-dashed py-3 -->
                         <p class="inline-flex"><img class="mx-1" src="./images/seat-gray.png">Available</p>
                         <p class="inline-flex"><img class="mx-1" src="./images/seat-green-filled.png">Selected</p>
                     </div>
@@ -308,41 +316,41 @@
                                 <!-- head -->
                                 <thead>
                                     <tr>
-                                        <th>Seat <span id="seat-Number" class="text-white bg-green-500 rounded-lg px-2">0</span></th>
+                                        <th>Seat <span id="seat-Number"
+                                                class="text-white bg-green-500 rounded-lg px-2">0</span></th>
                                         <th>Class</th>
                                         <th>Price</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <p class="text-red-600">No ticket selected !!! </p>
-                                    <!-- row 1 -->
-                                    <tr class="">
-                                        <th>C2</th>
-                                        <td>Economy</td>
-                                        <td>500</td>
+                                <tbody id="ticket-tbody">
+                                    <p id="no-ticket-warning" class="text-red-600 ">No ticket selected !!! </p>
+                                    <tr>
                                     </tr>
-                                   
                                 </tbody>
                             </table>
                         </div>
                         <!-- divider  -->
-                        <div class=" px-1"><p class="border-t-2 border-black"></p></div>
+                        <div class=" px-1">
+                            <p class="border-t-2 border-black"></p>
+                        </div>
 
+                        <!-- total price  -->
                         <div class="inter-md text-base flex justify-between px-3">
                             <p>Total Price</p>
-                            <p>BDT <span>00</span></p>
+                            <p>BDT <span id="total-price">00</span></p>
                         </div>
-                        <div class="inter-md text-base flex justify-between px-3 ">
+                        <div id="discount" class="inter-md text-base flex justify-between px-3 hidden">
                             <p>Discounted Price</p>
-                            <p>BDT <span>00</span></p>
+                            <p id="discount-price">BDT <span>00</span></p>
                         </div>
 
                         <!-- coupon code section  -->
-                         
+
                         <div class="inter-md my-2 px-3">
                             <label class="input input-bordered flex items-center justify-between relative">
-                                <input type="text" class=" grow placeholder:text-xs " placeholder="Have any copupon?" />
-                                <button
+                                <input id="user-coupon-code" type="text" class=" grow placeholder:text-xs "
+                                    placeholder="Have any copupon?" />
+                                <button id="coupon-apply-button" onclick="checkCouponCode()"
                                     class="btn btn-disabled btn-sm bg-[#1DD100] text-white hover:bg-[#1DD10099] absolute end-2">Apply</button>
                             </label>
                         </div>
@@ -350,43 +358,48 @@
                         <!-- total price  -->
                         <div class="inter-md text-base flex justify-between px-3">
                             <p>Grand Total</p>
-                            <p>BDT <span>00</span></p>
+                            <p>BDT <span id="grand-total">00</span></p>
                         </div>
                     </div> <!-- end price table  -->
 
                     <!-- user input section  -->
-                    <div class="inter-semi-bld text-base flex flex-col gap-3 justify-center items-center">
-                        <!-- user name  -->
-                        <label class="form-control w-full ">
-                            <div class="label">
-                                <span class="label-text">Passenger Name*</span>
-                            </div>
-                            <input type="text" placeholder="Enter your Name" class="input input-bordered w-full " />
-                        </label>
-                        <!-- user phone number -->
-                        <label class="form-control w-full ">
-                            <div class="label">
-                                <span class="label-text">Phone Number*</span>
-                            </div>
-                            <input type="number" placeholder="Enter your Phone Number"
-                                class="input input-bordered w-full " />
-                        </label>
-                        <!-- user email id  -->
-                        <label class="form-control w-full ">
-                            <div class="label">
-                                <span class="label-text">Email ID*</span>
-                            </div>
-                            <input type="email" placeholder="Enter your Email ID" class="input input-bordered w-full " />
-                        </label>
-                        <button class="raleway-xb text-xl mt-2 btn btn-wide w-full hover:bg-[#1DD10090] text-[#FFFFFF] bg-[#1DD100]">Next</button>
-                    </div>
-                    <div class="inter-reglr text-xs xl:text-base text-[#03071299] flex justify-between mt-5 px-3 underline">
-                        <a>Terms and Conditions</a>
-                        <a>Cancellation Policy</a>
-                    </div>
-
+                    <form action="./pages/page1.html">
+                        <div class="inter-semi-bld text-base flex flex-col gap-3 justify-center items-center">
+                            <!-- user name  -->
+                            <label class="form-control w-full ">
+                                <div class="label">
+                                    <span class="label-text">Passenger Name*</span>
+                                </div>
+                                <input required type="text" placeholder="Enter your Name"
+                                    class="input input-bordered w-full " />
+                            </label>
+                            <!-- user phone number -->
+                            <label class="form-control w-full ">
+                                <div class="label">
+                                    <span class="label-text">Phone Number*</span>
+                                </div>
+                                <input required type="number" placeholder="Enter your Phone Number"
+                                    class="input input-bordered w-full " />
+                            </label>
+                            <!-- user email id  -->
+                            <label class="form-control w-full ">
+                                <div class="label">
+                                    <span class="label-text">Email ID*</span>
+                                </div>
+                                <input required type="email" placeholder="Enter your Email ID"
+                                    class="input input-bordered w-full " />
+                            </label>
+                            <button
+                                class="raleway-xb text-xl mt-2 btn btn-wide w-full hover:bg-[#1DD10090] text-[#FFFFFF] bg-[#1DD100]">Next</button>
+                    </form>
                 </div>
-            </section>
+                <div class="inter-reglr text-xs xl:text-base text-[#03071299] flex justify-between mt-5 px-3 underline">
+                    <a>Terms and Conditions</a>
+                    <a>Cancellation Policy</a>
+                </div>
+
+        </div>
+        </section>
 
         </div>
 
@@ -403,7 +416,7 @@
         </aside>
         <nav class="flex flex-col gap-4 md:place-self-center md:justify-self-end">
             <h6 class="raleway-semi-bld text-xl text-white">Download our app</h6>
-            <div  class="flex gap-2 border-2 border-white rounded-md p-2 px-5 hover:bg-slate-600">
+            <div class="flex gap-2 border-2 border-white rounded-md p-2 px-5 hover:bg-slate-600">
                 <img src="./images/playstore.png" class="h-max">
                 <p class="flex flex-col "><span class="text-xs">GET IT ON</span><span class="text-lg">Goolge Play</span>
                 </p>
@@ -423,13 +436,9 @@
             </div>
         </div>
     </footer>
-    
+    <script src="./script/utility.js"></script>
     <script src="./script/script.js"></script>
-    <script>
-        function onclicki(){
-            console.log('clicked ')
-        }
-    </script>
+    <script src="./script/offerButton.js"></script>
 
 </body>
 
