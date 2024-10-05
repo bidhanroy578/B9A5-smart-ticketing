@@ -9,12 +9,12 @@ function addTicketToTable(sitName) {
     td1.innerText = "Economy"
     let td2 = document.createElement('td')
     td2.innerText = "550"
-//     tr.innerHTML = ` <th>sitname</th>
-// <td>Economy</td>
-// <td>550</td> `
-tr.appendChild(th)
-tr.appendChild(td1)
-tr.appendChild(td2)
+    //     tr.innerHTML = ` <th>sitname</th>
+    // <td>Economy</td>
+    // <td>550</td> `
+    tr.appendChild(th)
+    tr.appendChild(td1)
+    tr.appendChild(td2)
     tbody.appendChild(tr)
 }
 
@@ -42,7 +42,7 @@ function disableCouponApplyButton() {
         document.getElementById('coupon-apply-button').classList.add('btn-disabled')
     }
 }
-function grandTotalPriceAfterAppliedCoupon(){
+function grandTotalPriceAfterAppliedCoupon() {
     let total = parseFloat(document.getElementById('total-price').innerText)
     let discounted = parseFloat(document.getElementById('discount-price').innerText)
     let finalPrice = total - discounted
