@@ -1,5 +1,3 @@
-// let selectedButtons = document.getElementsByClassName('btnSelect').length
-
 function onClick(element) {
     let sit = document.getElementById('seat-Number').innerText
     let sitValue = parseFloat(sit)
@@ -7,8 +5,7 @@ function onClick(element) {
     const sitLeft = document.getElementById('sit-left')
     if (list.includes('btnSelect')) {
         console.log('you already selected the btn ')
-    }
-    else {
+    } else {
         if (sitValue < 4) {
             element.classList.add('btnSelect')
             sitValue = sitValue + 1
@@ -18,9 +15,7 @@ function onClick(element) {
             updateTotalPrice()
             enableCouponApplyButton()
             document.getElementById('next-page-button').classList.remove('btn-disabled')
-        }
-        else {
-            // console.log('limit excceeded ')
+        } else {
             alert("Limit excceeded, Can't select more then four tickets at once . ")
         }
     }
