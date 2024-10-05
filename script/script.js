@@ -17,6 +17,7 @@ function onClick(element) {
             addTicketToTable()
             updateTotalPrice()
             enableCouponApplyButton()
+            document.getElementById('next-page-button').classList.remove('btn-disabled')
         }
         else {
             // console.log('limit excceeded ')

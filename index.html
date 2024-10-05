@@ -76,7 +76,7 @@
                             Yes, you can run unit tests and view the results directly within the app. The integrated
                             testing features allow for a streamlined .
                         </p>
-                        <button class="btn btn-success bg-[#1DD100] raleway-bld text-xl">Buy Tickets</button>
+                        <a href="#select-your-sit"><button class="btn btn-success bg-[#1DD100] raleway-bld text-xl">Buy Tickets</button></a>
                     </div>
                 </div>
             </div>
@@ -210,7 +210,7 @@
             <section class="bg-white mt-10 flex  w-5/6 p-5 rounded-3xl">
                 <!-- seat selector  -->
                 <div class="w-2/3">
-                    <h3 class="text-start text-2xl font-bold mb-3">Select Your Seat</h3>
+                    <h3 id="select-your-sit" class="text-start text-2xl font-bold mb-3">Select Your Seat</h3>
                     <div class="divider px-5 "></div>
                     <div class="w-full flex justify-between inter-md">
                         <!-- border-y-2 border-slate-300 border-dashed py-3 -->
@@ -389,8 +389,8 @@
                                 <input required type="email" placeholder="Enter your Email ID"
                                     class="input input-bordered w-full " />
                             </label>
-                            <button
-                                class="raleway-xb text-xl mt-2 btn btn-wide w-full hover:bg-[#1DD10090] text-[#FFFFFF] bg-[#1DD100]">Next</button>
+                            <button id="next-page-button"
+                                class="raleway-xb text-xl mt-2 btn btn-wide w-full hover:bg-[#1DD10090] text-[#FFFFFF] bg-[#1DD100] btn-disabled">Next</button>
                     </form>
                 </div>
                 <div class="inter-reglr text-xs xl:text-base text-[#03071299] flex justify-between mt-5 px-3 underline">
